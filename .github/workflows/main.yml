@@ -32,4 +32,6 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: sudo docker run -d --name react-cont -p 8080:4100 react 
+      # delete container
+      - name: delete react-cont
         run: sudo docker stop react-cont && docker rm -f react-cont
